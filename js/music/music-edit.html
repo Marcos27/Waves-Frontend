@@ -1,0 +1,44 @@
+<h1>edit page</h1>
+<br>
+
+{{musicEditVm.music.artist}}
+<br>
+<hr>
+{{musicEditVm.music.song}}
+<br>
+<hr>
+{{musicEditVm.music.genre}}
+<br>
+<hr>
+{{musicEditVm.music.song_url}}
+<br>
+<hr>
+{{musicEditVm.music.bio}}
+
+<div>
+  <h3>Edit Show(Cause I Don't Like The One Listed)</h3>
+  <form id='edit-show' ng-submit="musicEditVm.editMusic()">
+    <div>
+      <label for="title">Artist:</label>
+      <input type="text" name="title" ng-model="musicEditVm.music.artist">
+    </div>
+    <div>
+      <label for="length">Song:</label>
+      <input type="text" name="length" ng-model="musicEditVm.music.song">
+    </div>
+    <div>
+      <label for="source">Genre:</label>
+      <input type="text" name="source" ng-model="musicEditVm.music.genre">
+    </div>
+    <div>
+      <label for="source">Song Url:</label>
+      <input type="text" name="source" ng-model="musicEditVm.music.song_url">
+    </div>
+    <div>
+      <label for="source">Bio:</label>
+      <input type="text" name="source" ng-model="musicEditVm.music.bio">
+    </div>
+    <input type="submit" value="Edit">
+  </form>
+</div>
+

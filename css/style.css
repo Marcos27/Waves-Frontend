@@ -1,0 +1,301 @@
+.main-box{
+  padding: 10px;
+}
+html {
+  height: 100%;
+  margin: 0;
+}
+body {
+  margin: 0;
+  height: 100%;
+  background-image: url(http://www.hercampus.com/sites/default/files/2015/10/22/imag0104.jpg);
+  background-size: 100%;
+  margin: auto;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+
+}
+.play-btn:hover{
+  box-shadow: 0px 0px 6px 5px #C2E4F4;
+}
+.play-btn{
+  border: 4px solid black;
+  padding: -1;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-image: url(https://cdn3.iconfinder.com/data/icons/social-messaging-productivity-3/128/arrow-right2-128.png);
+  color: black;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.stop-btn{
+  border: 0px solid #1E4B99;
+    box-shadow: 0px 0px 4px 3px #1E4B99;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-image: url(https://cdn3.iconfinder.com/data/icons/pictofoundry-pro-vector-set/512/MediaPause-512.png);
+  color: black;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.play-btn-lib{
+  border: 4px solid black;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-image: url(https://cdn3.iconfinder.com/data/icons/social-messaging-productivity-3/128/arrow-right2-128.png);
+    color: black;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+.stop-btn-lib{
+ border: 0px solid #1E4B99;
+    box-shadow: 0px 0px 4px 3px #1E4B99;
+    border-radius: 50%;
+    width: 21px;
+    height: 21px;
+    background-image: url(https://cdn3.iconfinder.com/data/icons/pictofoundry-pro-vector-set/512/MediaPause-512.png);
+    color: black;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+.mp3-outside-lib{
+     display: inline-block;
+    padding: 6px;
+    width: 100px;
+    height: 30px;
+}
+.sound-bar-lib{
+        border: 0px solid black;
+    width: 72px;
+    height: 32px;
+    background-image: url(http://38.media.tumblr.com/tumblr_m1zdnlaAvX1r3we0y.gif);
+    color: black;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+.input-style {
+    color: white;
+    width: 50%;
+    text-align: center;
+    font-size: 150%;
+
+    border: 1px solid black;
+    height: 30px;
+    background-color: rgba(0,0,0,0.0000001);
+}
+.container{
+    border: 1px solid black;
+    width: 70%;
+        background-color: rgba(229,229,229,0.9);
+}
+
+.row-lib{
+  border:2px solid black;
+}
+
+
+.left-side-video-holder{
+         border: 2px solid black;
+    width: 55.8%;
+    display: inherit;
+    height: 318px;
+    float: left;
+}
+.left-side-video-cover-all {
+     border: 0px solid black;
+    width: 54.2%;
+    display: inline-block;
+    height: 321px;
+    float: none;
+    position: absolute;
+    background-color: rgba(0,0,0,0.000001);
+    margin: -3px;
+}
+
+.left-top-video-cover {
+    border: 2px solid black;
+    height: 13%;
+    background-color: black;
+}
+.left-down-video-cover {
+    border: 2px solid black;
+    height: 13%;
+    background-color: black;
+    position: relative;
+    top: 72%;
+}
+/*.video {
+  display: none;
+}*/
+
+.ytp-youtube-button, .ytp-button, .yt-uix-sessionlink{
+  display: none;
+}
+.date-20160523, .en_US, .ltr,  .exp-responsive, .exp-scrollable-guide,   .site-center-aligned .site-as-giant-card,  .not-yt-legacy-css, .webkit, .webkit-537{
+      font: 12px Roboto,Arial,sans-serif;
+    background-color: #000;
+    color: #fff;
+    height: 146%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    margin: -45px;
+    margin-left: auto;
+    padding: 0;
+}
+
+iframe {
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    display: inline-block;
+    margin: -3px;
+    border: 0px solid black;
+}
+.index-add-new-song-btn{
+  background-color: #D66F65;
+  margin: 20px;
+  border: 5px solid black;
+  width: 10%;
+  height: 5%;
+  text-align: center;
+  box-shadow: 30px 30px 15px grey;
+}
+
+.music-title-box{
+  border: 5px solid black;
+  width: 20%;
+  height: 5%;
+  box-shadow: 30px 30px 15px grey;
+  text-align: center;
+  background-color: #7FB0C7;
+  color: white;
+}
+.add-title{
+  margin: 20px;
+   border: 5px solid black;
+   width: 70%;
+  height: 5%;
+  box-shadow: 30px 30px 15px grey;
+  text-align: center;
+}
+
+.input-new-song{
+  margin: 50px;
+  padding: 8px;
+  border: 2px solid black;
+  width: 40%;
+  height: 10%;
+  box-shadow: 30px 30px 15px grey;
+  text-align: center;
+}
+.input-btn{
+  margin: 50px;
+  padding: 8px;
+  border: 2px solid black;
+  width: 5%;
+  height: 10%;
+  box-shadow: 30px 30px 15px grey;
+  text-align: center;
+}
+
+
+.music-post{
+  margin-top: 40px;
+  margin-bottom: 40px;
+    display: inline-block;
+    border: 2px solid black;
+    width: 99%;
+    height: 50%;
+    box-shadow: 30px 30px 90px black;
+    text-align: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.all-music-player{
+    border: 1px solid black;
+    width: 96%;
+    border-radius: 50px;
+    margin: 5px;
+
+}
+.artist-and-song-holder{
+  border: 2px solid black;
+  display: inline-block;
+
+}
+.song-hold{
+
+   display: inline-block;
+   width: 50%;
+
+}
+.music-box-holder {
+      position: relative;
+    float: right;
+    width: 43%;
+    height: 320px;
+    display: inline-block;
+    overflow: scroll;
+}
+
+
+.add-new-song-box{
+  margin: 70px;
+  border: 2px solid black;
+  width: 50%;
+  min-height: 80%;
+  box-shadow: 30px 30px 15px grey;
+
+}
+#index-delete-btn{
+  margin: 10px;
+  float: right;
+  border: 1px solid #D66F65;
+  box-shadow: 5px 5px 15px grey;
+  background-color: #D66F65;
+}
+
+
+.index-all-users-box{
+  display: inline-block;
+  margin: 10px;
+  border: 2px solid black;
+  width: 30%;
+  height: 200px;
+
+}
+.mp3-outside{
+  display: inline-block;
+    padding: 6px;
+}
+.sound-bar{
+    border: 0px solid black;
+    width: 72px;
+    height: 50px;
+    background-image: url(http://38.media.tumblr.com/tumblr_m1zdnlaAvX1r3we0y.gif);
+    color: black;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+

@@ -1,0 +1,44 @@
+<center>
+  <div class="main-box">
+    <div class="music-title-box">
+      <h1>Music</h1>
+
+    </div>
+    <br>
+     <div class="music-post">
+     <div  class="left-side-video-holder">
+        <div ng-repeat="music in musicListVm.musics" ng-show="music.playing" class="left-side-video-cover-all">
+          <div class="left-top-video-cover">
+          </div>
+          <div class="left-down-video-cover">
+          </div>
+      </div>
+       <iframe ng-repeat="music in musicListVm.musics" ng-show="music.playing" class="video" width="100%" height="100%" src="{{ musicListVm.musicSrc(music) }}"  frameborder="0" allowfullscreen></iframe>
+      </div >
+      <div class="music-box-holder">
+       <div ng-repeat="music in musicListVm.musics">
+         <div class="all-music-player">
+           <div class="mp3-outside">
+              <div ng-hide="music.playing" class="play-btn" ng-click="musicListVm.musicplayerFunction(music)"></div>
+              <div ng-show="music.playing" class="stop-btn" ng-click="musicListVm.musicstoperFunction(music)"></div>
+              <div ng-show="music.playing" class="sound-bar"></div>
+            </div>
+            <div class="song-hold">
+                <strong>{{ music.song }}</strong>
+                <br>
+                <hr>
+
+               {{ music.artist }}
+            </div>
+
+            <!-- <Audio controls>
+            <source  type="audio/mp3">
+            </Audio> -->
+            <br>
+
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+</center>

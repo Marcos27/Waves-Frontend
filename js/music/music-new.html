@@ -1,0 +1,26 @@
+<div>
+  <h3>Add New Songs</h3>
+  <form id='new-show' ng-submit="musicNewVm.addMusic()">
+    <div>
+      <label for="title">Artist:</label>
+      <input type="text" name="title" ng-model="musicNewVm.newMusic.artist">
+    </div>
+    <div>
+      <label for="length">Song:</label>
+      <input type="text" name="length" ng-model="musicNewVm.newMusic.song">
+    </div>
+    <div>
+      <label for="source">Genre:</label>
+      <input type="text" name="source" ng-model="musicNewVm.newMusic.genre">
+    </div>
+    <div>
+      <label for="source">Song URL:</label>
+      <input type="text" name="source" ng-model="musicNewVm.newMusic.song_url">
+    </div>
+    <div>
+      <label for="source">Bio:</label>
+      <input type="text" name="source" ng-model="musicNewVm.newMusic.bio">
+    </div>
+    <input type="submit" value="Add">
+  </form>
+</div>
