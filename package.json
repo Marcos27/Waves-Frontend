@@ -1,0 +1,19 @@
+{
+  "name": "WSMD",
+  "version": "0.0.0",
+  "private": false,
+  "author": "WDI DTLA 9",
+  "devDependencies": {
+  },
+  "engines": {
+    "node": "5.11.0",
+    "npm": "3.8.6"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "express": "4.13.3"
+  },
+  "cacheDirectories": ["node_modules"]
+}

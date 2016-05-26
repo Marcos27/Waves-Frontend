@@ -6,7 +6,8 @@
 
     function MusicResource($resource) {
       return $resource(
-        "http://localhost:3000/api/musics/:id",
+        // "http://localhost:3000/api/musics/:id",
+        "https://waves-backend.herokuapp.com/api/musics/:id",
         {id: '@id'}, {
           'update': { method: 'PUT'}
         }
