@@ -3,8 +3,7 @@
     .config(function($authProvider) {
           $authProvider
             .configure({
-              // apiUrl: 'http://localhost:3000',
-              apiUrl: 'https://waves-backend.herokuapp.com',
+              apiUrl: backendUrl,
               authProviderPaths: {
               spotify: '/auth/spotify'
               }
