@@ -63,8 +63,12 @@
         </td>
         <td>{{ music.artist }}</td>
         <td>{{ music.song }}</td>
-        <td>{{ music.genre }}</td></div>
+        <td>{{ music.genre }}</td>
+       <td> <button ng-click="musicListVm.likeMusic(music)">Like</button>
+
+        </td></div>
       </tr>
+
     </tbody>
 
   </table>

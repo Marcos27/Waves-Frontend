@@ -4,7 +4,7 @@
     .controller("MusicShowController", MusicShowController)
     .controller("MusicEditController", MusicEditController)
 
-    MusicListController.$inject = ['MusicResource', '$sce'];
+    MusicListController.$inject = ['MusicResource', '$sce', 'LikeResource'];
     MusicShowController.$inject = ['MusicResource', '$stateParams'];
     MusicEditController.$inject = ['MusicResource', '$stateParams', '$state'];
 
@@ -14,7 +14,7 @@
 
 
 
-    function MusicListController(MusicResource, $sce) {
+    function MusicListController(MusicResource, $sce, LikeResource) {
       var vm = this;
       vm.musics = [];
       vm.musicplayerFunction = musicplayerFunction;
@@ -22,6 +22,8 @@
       vm.musicSrc = musicSrc;
       vm.newMusic = {};
       vm.addMusic = addMusic;
+      vm.likeMusic = likeMusic;
+      vm.likes = {};
 
       MusicResource.query().$promise.then(function(musics) {
         vm.musics = musics;
@@ -30,9 +32,28 @@
         })
       });
 
+      // LikeResource.query().$promise.then(function(likes) {
+      //   vm.likes = likes.map(function(like) {
+      //     return vm.musics.find(function(music) {
+      //       return music.id == like.id;
+      //     });
+      //   });
+      //   console.log(vm.likes);
+      // })
+
       vm.sortType     = 'name'; // set the default sort type
       vm.sortReverse  = false;  // set the default sort order
       vm.searchMusic   = '';     // set the default search/filter term
+
+      function likeMusic(music) {
+        var newLike = {
+          music_id: music.id
+        }
+        LikeResource.save(newLike).$promise.then(function(res) {
+          console.log(res);
+        })
+        console.log(newLike)
+      }
 
       function addMusic() {
         MusicResource.save(vm.newMusic).$promise.then(function(jsonMusic) {
