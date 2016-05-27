@@ -9,11 +9,6 @@
     MusicEditController.$inject = ['MusicResource', '$stateParams', '$state'];
 
 
-
-
-
-
-
     function MusicListController(MusicResource, $sce, LikeResource) {
       var vm = this;
       vm.musics = [];
