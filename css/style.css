@@ -1,6 +1,17 @@
 .dont-show{
   display: none;
 }
+.full-cover-background{
+    margin: 0;
+  /*height: 100%;*/
+  width: 100%;
+  /*position: fixed;*/
+  background-size: 100%;
+  margin: auto;
+  background-image: url(http://hdwallpapergirls.com/assets/large/beach-waves-background-wallpaper.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
 
 /* The Modal (background) */
 .modal {
@@ -25,20 +36,21 @@
     border: 1px solid #888;
     width: 35%;
     border-radius: 30px;
-    border: 2px solid #1E4B99;
-    box-shadow: 0px 0px 30px 5px #1E4B99;
+    border: 2px solid #43A41F;
+    box-shadow: 0px 0px 30px 5px #43A41F;
 }
 #myBtn {
-    border: 1px solid #C03F35;
+    margin: 20px;
+    border: 1px solid #43A41F;
     width: 200px;
-    background-color: #C03F35;
+    background-color: #43A41F;
     border-radius: 20px;
     padding: 10px;
 }
 .add{
-       border: 1px solid #C03F35;
+       border: 1px solid #43A41F;
     width: 50px;
-    background-color: #C03F35;
+    background-color: #43A41F;
     border-radius: 20px;
     padding: 3px;
 }
@@ -60,7 +72,18 @@
     text-decoration: none;
     cursor: pointer;
 }
-
+.search-icon {
+    left: 10px;
+    display: inline-block;
+    height: 57px;
+    width: 57px;
+    float: left;
+    background-image: url(http://www.clker.com/cliparts/O/L/w/R/n/a/search-icon-marine-md.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-top: 7px;
+}
 .main-box{
   padding: 10px;
 }
@@ -71,7 +94,6 @@ html {
 body {
   margin: 0;
   height: 100%;
-  background-image: url(http://www.hercampus.com/sites/default/files/2015/10/22/imag0104.jpg);
   background-size: 100%;
   margin: auto;
 }
@@ -110,11 +132,12 @@ a{
   background-repeat: no-repeat;
   display: inline-block;
 }
-.play-btn-lib{
-  border: 4px solid black;
+.play-btn-lib {
+    border: 4px solid black;
     border-radius: 50%;
-    width: 15px;
-    height: 15px;
+    width: 50px;
+    height: 50px;
+    background-color: #43A41F;
     background-image: url(https://cdn3.iconfinder.com/data/icons/social-messaging-productivity-3/128/arrow-right2-128.png);
     color: black;
     background-size: 100%;
@@ -123,46 +146,78 @@ a{
 }
 .stop-btn-lib{
  border: 0px solid #1E4B99;
-    box-shadow: 0px 0px 4px 3px #1E4B99;
+    box-shadow: 0px 0px 4px 3px #43A41F;
     border-radius: 50%;
-    width: 21px;
-    height: 21px;
+    width: 58px;
+    height: 58px;
+    background-color: #43A41F;
     background-image: url(https://cdn3.iconfinder.com/data/icons/pictofoundry-pro-vector-set/512/MediaPause-512.png);
     color: black;
     background-size: 100%;
     background-repeat: no-repeat;
     display: inline-block;
 }
-.mp3-outside-lib{
-     display: inline-block;
+.mp3-outside-lib {
+    display: inline-block;
     padding: 6px;
-    width: 100px;
+    width: 137px;
     height: 30px;
 }
-.sound-bar-lib{
-        border: 0px solid black;
-    width: 72px;
-    height: 32px;
+.sound-bar-lib {
+    border: 0px solid black;
+    width: 71px;
+    height: 50px;
     background-image: url(http://38.media.tumblr.com/tumblr_m1zdnlaAvX1r3we0y.gif);
     color: black;
     background-size: 100%;
     background-repeat: no-repeat;
     display: inline-block;
 }
-.input-style {
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+.like-btn-lib {
+    width: 35px;
+    height: 35px;
+    background-image: url(http://akpp-mers.ru/img/likel.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    cursor: cell;
+    border-radius: 50%;
+    background-color: black;
+    display: inline-block;
+}
+
+
+.input-style-lib {
+    margin-bottom: 10px;
+    margin-left: 4px;
     color: white;
-    width: 50%;
+    width: 25%;
     text-align: center;
     font-size: 150%;
-
-    border: 1px solid black;
-    height: 30px;
-    background-color: rgba(0,0,0,0.0000001);
+    border: 2px solid #43A41F;
+    height: 65px;
+    float: left;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.5);
 }
 .container{
-    border: 1px solid black;
-    width: 70%;
-        background-color: rgba(229,229,229,0.9);
+    margin: 10px;
+    width: 99%;
+    min-height: 625px;
+    height: 625px;
+    border-radius: 10px;
+    overflow: scroll;
+
+        background-color: rgba(229,229,229,0.4);
 }
 
 .row-lib{
@@ -360,5 +415,10 @@ iframe {
     background-size: 100%;
     background-repeat: no-repeat;
     display: inline-block;
+}
+
+.table-bordered, .table-striped {
+  width: 95%;
+  font-size: 150%;
 }
 
