@@ -1,7 +1,7 @@
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: #004080;
+    background-color: #43A41F;
 }
 
 .dont-show{
@@ -167,6 +167,7 @@ body {
   background-color: #333333 ;
   background-size: 100%;
   margin: auto;
+  /*font-family: ;*/
 }
 
 a{
@@ -449,8 +450,9 @@ iframe {
   width: 96%;
   /*border-radius: 50px;*/
   margin: 5px;
-  background-color: #2B3250;
+  /*background-color: #2B3250;*/
   box-shadow: 30px 30px 90px black;
+  background-color: rgba(229,229,229,0.4);
 
 
 
