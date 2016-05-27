@@ -1,85 +1,15 @@
 <center>
-
-<div class="container" >
-
-  <form>
-    <div class="form-group">
-      <div class="input-group">
-        <div class="input-group-addon"><i class="fa fa-search"></i></div>
-        <input type="text" class="input-style" placeholder="Search all the music" ng-model="searchMusic">
-      </div>
-    </div>
-  </form>
-
-  <table class="table table-bordered table-striped">
-
-    <thead>
-      <tr>
-      <td>
-        <a href="#" ng-click="sortType = 'song_url'; sortReverse = !sortReverse">
-            Player
-            <hr>
-            <span ng-show="sortType == 'song_url' && !sortReverse" class="fa fa-caret-down"></span>
-            <span ng-show="sortType == 'song_url' && sortReverse" class="fa fa-caret-up"></span>
-          </a>
-        </td>
-        <td>
-          <a href="#" ng-click="sortType = 'artist'; sortReverse = !sortReverse">
-            Artist
-            <hr>
-            <span ng-show="sortType == 'artist' && !sortReverse" class="fa fa-caret-down"></span>
-            <span ng-show="sortType == 'artist' && sortReverse" class="fa fa-caret-up"></span>
-          </a>
-        </td>
-        <td>
-          <a href="#" ng-click="sortType = 'song'; sortReverse = !sortReverse">
-          Song
-          <hr>
-            <span ng-show="sortType == 'song' && !sortReverse" class="fa fa-caret-down"></span>
-            <span ng-show="sortType == 'song' && sortReverse" class="fa fa-caret-up"></span>
-          </a>
-        </td>
-        <td>
-          <a href="#" ng-click="sortType = 'genre'; sortReverse = !sortReverse">
-          Genre
-          <hr>
-            <span ng-show="sortType == 'genre' && !sortReverse" class="fa fa-caret-down"></span>
-            <span ng-show="sortType == 'genre' && sortReverse" class="fa fa-caret-up"></span>
-          </a>
-        </td>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr ng-repeat="music in musicListVm.musics | orderBy:sortType:sortReverse | filter:searchMusic">
-        <div class="row-lib">
-        <td>
-
-          <div class="mp3-outside-lib">
-            <div ng-hide="music.playing" class="play-btn-lib" ng-click="musicListVm.musicplayerFunction(music)"></div>
-            <div ng-show="music.playing" class="stop-btn-lib" ng-click="musicListVm.musicstoperFunction(music)"></div>
-            <div ng-show="music.playing" class="sound-bar-lib"></div>
-          </div>
-        </td>
-        <td>{{ music.artist }}</td>
-        <td>{{ music.song }}</td>
-        <td>{{ music.genre }}</td></div>
-      </tr>
-    </tbody>
-
-  </table>
-
-</div>
-</center>
-<hr>
-<hr>
-
-<center>
   <div class="main-box">
     <div class="music-title-box">
       <h1>Music</h1>
 
     </div>
+
+      <div class="input-group">
+        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+        <input type="text" class="input-style" placeholder="Search all the music" ng-model="searchMusic">
+      </div>
+
     <br>
      <div class="music-post">
      <div  class="left-side-video-holder">
@@ -92,7 +22,7 @@
        <iframe ng-repeat="music in musicListVm.musics" ng-show="music.playing" class="video" width="100%" height="100%" src="{{ musicListVm.musicSrc(music) }}"  frameborder="0" allowfullscreen></iframe>
       </div >
       <div class="music-box-holder">
-       <div ng-repeat="music in musicListVm.musics">
+       <div ng-repeat="music in musicListVm.musics | orderBy:sortType:sortReverse | filter:searchMusic">
          <div class="all-music-player">
            <div class="mp3-outside">
               <div ng-hide="music.playing" class="play-btn" ng-click="musicListVm.musicplayerFunction(music)"></div>
@@ -100,6 +30,18 @@
               <div ng-show="music.playing" class="sound-bar"></div>
             </div>
             <div class="song-hold">
+
+              <a href="#" ng-click="sortType = 'artist'; sortReverse = !sortReverse"></a>
+              <a href="#" ng-click="sortType = 'song'; sortReverse = !sortReverse"></a>
+              <a href="#" ng-click="sortType = 'genre'; sortReverse = !sortReverse"></a>
+             <span ng-show="sortType == 'artist' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'artist' && sortReverse" class="fa fa-caret-up"></span>
+             <span ng-show="sortType == 'song' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'song' && sortReverse" class="fa fa-caret-up"></span>
+             <span ng-show="sortType == 'genre' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'genre' && sortReverse" class="fa fa-caret-up"></span>
+
+
                 <strong>{{ music.song }}</strong>
                 <br>
                 <hr>

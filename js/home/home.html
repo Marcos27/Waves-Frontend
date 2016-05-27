@@ -9,5 +9,79 @@
   log out with spotify
 </button>
 
+<hr>
 
+<center>
+
+<div class="container" >
+
+  <form>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+        <input type="text" class="input-style" placeholder="Search all the music" ng-model="searchMusic">
+      </div>
+    </div>
+  </form>
+
+  <table class="table table-bordered table-striped">
+
+    <thead>
+      <tr>
+      <td>
+        <a href="#" ng-click="sortType = 'song_url'; sortReverse = !sortReverse">
+            Player
+            <hr>
+            <span ng-show="sortType == 'song_url' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'song_url' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </td>
+        <td>
+          <a href="#" ng-click="sortType = 'artist'; sortReverse = !sortReverse">
+            Artist
+            <hr>
+            <span ng-show="sortType == 'artist' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'artist' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </td>
+        <td>
+          <a href="#" ng-click="sortType = 'song'; sortReverse = !sortReverse">
+          Song
+          <hr>
+            <span ng-show="sortType == 'song' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'song' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </td>
+        <td>
+          <a href="#" ng-click="sortType = 'genre'; sortReverse = !sortReverse">
+          Genre
+          <hr>
+            <span ng-show="sortType == 'genre' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'genre' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </td>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr ng-repeat="music in musicListVm.musics | orderBy:sortType:sortReverse | filter:searchMusic">
+        <div class="row-lib">
+        <td>
+
+          <div class="mp3-outside-lib">
+            <div ng-hide="music.playing" class="play-btn-lib" ng-click="musicListVm.musicplayerFunction(music)"></div>
+            <div ng-show="music.playing" class="stop-btn-lib" ng-click="musicListVm.musicstoperFunction(music)"></div>
+            <div ng-show="music.playing" class="sound-bar-lib"></div>
+          </div>
+        </td>
+        <td>{{ music.artist }}</td>
+        <td>{{ music.song }}</td>
+        <td>{{ music.genre }}</td></div>
+      </tr>
+    </tbody>
+
+  </table>
+
+</div>
+</center>
 

@@ -4,6 +4,7 @@
 
     HomeController.$inject = ['$auth'];
 
+
   function HomeController($auth) {
     var vm = this;
 
