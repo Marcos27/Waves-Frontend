@@ -17,7 +17,7 @@
       vm.newMusic = {};
       vm.addMusic = addMusic;
       vm.likeMusic = likeMusic;
-      vm.likes = {};
+
 
 
 
@@ -47,14 +47,6 @@
         })
       });
 
-      // LikeResource.query().$promise.then(function(likes) {
-      //   vm.likes = likes.map(function(like) {
-      //     return vm.musics.find(function(music) {
-      //       return music.id == like.id;
-      //     });
-      //   });
-      //   console.log(vm.likes);
-      // })
 
       vm.sortType     = 'name'; // set the default sort type
       vm.sortReverse  = false;  // set the default sort order

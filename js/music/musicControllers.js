@@ -23,7 +23,7 @@
       vm.newMusic = {};
       vm.addMusic = addMusic;
       vm.likeMusic = likeMusic;
-      vm.likes = {};
+      vm.likes = [];
 
 
 
@@ -46,21 +46,20 @@
           }
       }
 
-      MusicResource.query().$promise.then(function(musics) {
-        vm.musics = musics;
-        vm.musics.forEach(function (music) {
-          music.playing = false
-        })
-      });
 
-      // LikeResource.query().$promise.then(function(likes) {
-      //   vm.likes = likes.map(function(like) {
-      //     return vm.musics.find(function(music) {
-      //       return music.id == like.id;
-      //     });
-      //   });
-      //   console.log(vm.likes);
-      // })
+
+      LikeResource.query().$promise.then(function(likes) {
+        MusicResource.query().$promise.then(function(musics) {
+          vm.musics = likes.map(function(like) {
+            return musics.find(function(music) {
+              return music.id == like.music_id;
+            });
+          });
+          vm.musics.forEach(function (music) {
+            music.playing = false
+          })
+        });
+      })
 
       vm.sortType     = 'name'; // set the default sort type
       vm.sortReverse  = false;  // set the default sort order
