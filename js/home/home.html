@@ -9,5 +9,120 @@
   log out with spotify
 </button>
 
+<center>
+
+<div class="container" >
+
+  <form>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+        <input type="text" class="input-style" placeholder="Search all the music" ng-model="searchMusic">
+      </div>
+    </div>
+  </form>
+
+  <table class="table table-bordered table-striped">
+
+    <thead>
+      <tr>
+      <td>
+        <a href="#" ng-click="sortType = 'song_url'; sortReverse = !sortReverse">
+            Player
+            <hr>
+            <span ng-show="sortType == 'song_url' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'song_url' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </td>
+        <td>
+          <a href="#" ng-click="sortType = 'artist'; sortReverse = !sortReverse">
+            Artist
+            <hr>
+            <span ng-show="sortType == 'artist' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'artist' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </td>
+        <td>
+          <a href="#" ng-click="sortType = 'song'; sortReverse = !sortReverse">
+          Song
+          <hr>
+            <span ng-show="sortType == 'song' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'song' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </td>
+        <td>
+          <a href="#" ng-click="sortType = 'genre'; sortReverse = !sortReverse">
+          Genre
+          <hr>
+            <span ng-show="sortType == 'genre' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'genre' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </td>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr ng-repeat="music in homeVm.musics | orderBy:sortType:sortReverse | filter:searchMusic">
+        <div class="row-lib">
+        <td>
+
+          <div class="mp3-outside-lib">
+            <div ng-hide="music.playing" class="play-btn-lib" ng-click="homeVm.musicplayerFunction(music)"></div>
+            <div ng-show="music.playing" class="stop-btn-lib" ng-click="homeVm.musicstoperFunction(music)"></div>
+            <div ng-show="music.playing" class="sound-bar-lib"></div>
+          </div>
+        </td>
+        <td>{{ music.artist }}</td>
+        <td>{{ music.song }}</td>
+        <td>{{ music.genre }}</td>
+       <td> <button ng-click="homeVm.likeMusic(music)">Like</button>
+
+        </td></div>
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
+</center>
+
+<div id="myBtn">Add a Song!</div>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">×</span>
+        <div>
+      <h3>Add New Songs</h3>
+      <form id='new-show' ng-submit="homeVm.addMusic()">
+        <div>
+          <label for="title">Artist</label>
+          <br>
+          <input class="input-add-song" type="text" name="title" ng-model="homeVm.newMusic.artist" required>
+        </div>
+        <div>
+          <label for="length">Song</label>
+          <br>
+          <input class="input-add-song" type="text" name="length" ng-model="homeVm.newMusic.song" required>
+        </div>
+        <div>
+          <label for="source">Genre</label>
+          <br>
+          <input class="input-add-song" type="text" name="source" ng-model="homeVm.newMusic.genre" required>
+        </div>
+        <div>
+          <label for="source">YouTube URL</label>
+          <br>
+          <input class="input-add-song" type="text" name="source" ng-model="homeVm.newMusic.song_url" required>
+        </div>
+        <br>
+        <div class="add"><input type="submit" class="add" value="Add"></div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+       <iframe class="dont-show" ng-repeat="music in homeVm.musics" ng-show="music.playing" class="video" width="100%" height="100%" src="{{ homeVm.musicSrc(music) }}"  frameborder="0" allowfullscreen></iframe>
+
 
 
