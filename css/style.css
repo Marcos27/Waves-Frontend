@@ -1,6 +1,7 @@
 .dont-show{
   display: none;
 }
+
 .full-cover-background{
     margin: 0;
   /*height: 100%;*/
@@ -39,14 +40,88 @@
     border: 2px solid #43A41F;
     box-shadow: 0px 0px 30px 5px #43A41F;
 }
-#myBtn {
+/*#myBtn {
     margin: 20px;
     border: 1px solid #43A41F;
     width: 200px;
     background-color: #43A41F;
     border-radius: 20px;
     padding: 10px;
+    content: '+';
+     transition: 0.5s;
 }
+*/
+
+#myBtn {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #43A41F;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#myBtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.nav-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: grey;
+}
+
+.nav-li {
+    float: left;
+}
+
+.nav-li, .nav-a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.nav-logo {
+    width: 200px;
+    position: absolute;
+    left: 80%;
+    top: 1%;
+    height: 64px;
+    background-size: 100%;
+    background-image: url(https://dewey.tailorbrands.com/production/brand_version_mockup_image/751/27930751_4924a031-8375-40e4-bbe2-4b0b9bcdc11d.png?cb=1464332476);
+    background-repeat: no-repeat;
+}
+
+#myBtn span:after {
+  content: '+';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#myBtn:hover span {
+  padding-right: 25px;
+}
+
+#myBtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
 .add{
        border: 1px solid #43A41F;
     width: 50px;
@@ -194,13 +269,30 @@ th, td {
     background-color: black;
     display: inline-block;
 }
+/*input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
 
+input[type=text]:focus {
+    width: 100%;
+}*/
 
-.input-style-lib {
+.input-style-lib[type=text] {
     margin-bottom: 10px;
     margin-left: 4px;
     color: white;
-    width: 25%;
+    width: 250px;
     text-align: center;
     font-size: 150%;
     border: 2px solid #43A41F;
@@ -208,6 +300,11 @@ th, td {
     float: left;
     border-radius: 20px;
     background-color: rgba(0,0,0,0.5);
+  -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+.input-style-lib[type=text]:focus {
+    width: 600px;
 }
 .container{
     margin: 10px;
