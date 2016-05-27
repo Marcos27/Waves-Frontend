@@ -111,30 +111,43 @@
       </div>
     </div>
 
-    <div>
+
+
+
+
+
+<div id="myBtn">Add a Song!</div>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">×</span>
+        <div>
       <h3>Add New Songs</h3>
       <form id='new-show' ng-submit="musicListVm.addMusic()">
         <div>
-          <label for="title">Artist:</label>
-          <input type="text" name="title" ng-model="musicListVm.newMusic.artist">
+          <label for="title">Artist</label>
+          <br>
+          <input class="input-add-song" type="text" name="title" ng-model="musicListVm.newMusic.artist" required>
         </div>
         <div>
-          <label for="length">Song:</label>
-          <input type="text" name="length" ng-model="musicListVm.newMusic.song">
+          <label for="length">Song</label>
+          <br>
+          <input class="input-add-song" type="text" name="length" ng-model="musicListVm.newMusic.song" required>
         </div>
         <div>
-          <label for="source">Genre:</label>
-          <input type="text" name="source" ng-model="musicListVm.newMusic.genre">
+          <label for="source">Genre</label>
+          <br>
+          <input class="input-add-song" type="text" name="source" ng-model="musicListVm.newMusic.genre" required>
         </div>
         <div>
-          <label for="source">Song URL:</label>
-          <input type="text" name="source" ng-model="musicListVm.newMusic.song_url">
+          <label for="source">YouTube URL</label>
+          <br>
+          <input class="input-add-song" type="text" name="source" ng-model="musicListVm.newMusic.song_url" required>
         </div>
-        <input type="submit" value="Add">
+        <br>
+        <div class="add"><input type="submit" class="add" value="Add"></div>
       </form>
     </div>
-
-
-
+  </div>
+</div>
  </div>
 </center>

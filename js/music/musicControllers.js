@@ -23,6 +23,27 @@
       vm.newMusic = {};
       vm.addMusic = addMusic;
 
+
+
+      var modal = document.getElementById('myModal');
+      var btn = document.getElementById("myBtn");
+      var span = document.getElementsByClassName("close")[0];
+      var add = document.getElementsByClassName("add")[0];
+      btn.onclick = function() {
+          modal.style.display = "block";
+      }
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+      add.onclick = function() {
+          modal.style.display = "none";
+      }
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+
       MusicResource.query().$promise.then(function(musics) {
         vm.musics = musics;
         vm.musics.forEach(function (music) {
